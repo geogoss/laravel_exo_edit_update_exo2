@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Member;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MemberController extends Controller
 {
@@ -54,6 +55,11 @@ class MemberController extends Controller
         $update->age = $request->age;
         $update->genre = $request->genre;
         $update->save();
+        return redirect('/');
+    }
+
+    public function deleteAll () {
+        DB::table('members')->delete();
         return redirect('/');
     }
 }

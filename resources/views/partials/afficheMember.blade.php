@@ -1,6 +1,8 @@
 <section class="m-5 row">
+    <a href="/deleteAll" class="btn btn-warning">Delete all</a>
+
     @foreach ($members as $item)
-        <div class="card col-3 m-5 mx-auto" style="width: 18rem;">
+        <div class="card col-4 m-5 mx-auto" style="width: 18rem;">
             <a href="/show/{{ $item->id }} ">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">{{ $item->id }} </li>
@@ -16,8 +18,7 @@
                         <button class="btn btn-primary">
                             @csrf
                             <a class="text-decoration-none text-white" href="/edit/{{ $item->id }} ">Modifier</a>
-                        </button>
-        
+                        </button>        
                     </li>
                 </ul>
             </a>

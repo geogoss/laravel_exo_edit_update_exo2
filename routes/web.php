@@ -26,4 +26,4 @@ Route::delete('/delete/{id}', [MemberController::class, 'destroy']);
 Route::get('/show/{id}', [MemberController::class, 'show']);
 Route::get('/edit/{id}', [MemberController::class, 'edit']);
 Route::put('/update/{id}', [MemberController::class, 'update']);
-
+Route::get('/deleteAll', [MemberController::class, 'deleteAll']);
